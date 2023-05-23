@@ -14,9 +14,11 @@
             <li><a href="{% url 'menu' %}">Menu</a> </li>
         </ul>
     </nav>
-    <main>
-        {% block content %}
-        {% endblock %}
+    <main class="main_wrap">
+        <div class="main_content">
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
 </body>
 </html>
