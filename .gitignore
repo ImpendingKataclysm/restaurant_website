@@ -161,3 +161,4 @@ cython_debug/
 /restaurant/admin.py
 /restaurant/apps.py
 /restaurant/tests.py
+/restaurant/migrations/0001_initial.py
