@@ -156,3 +156,8 @@ cython_debug/
 /restaurant_website/urls.py
 /restaurant_website/wsgi.py
 /manage.py
+/restaurant/migrations/__init__.py
+/restaurant/__init__.py
+/restaurant/admin.py
+/restaurant/apps.py
+/restaurant/tests.py
