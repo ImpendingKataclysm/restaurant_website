@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(to bottom, #2a0101, #58181F) no-repeat;
+    color: #fff;
+    height: 100vh;
+    font-family: Calibri, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    background: linear-gradient(to bottom, #38040c, #80091B);
+}
+
+nav li a:link, nav li a:visited {
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: #fff;
+}
