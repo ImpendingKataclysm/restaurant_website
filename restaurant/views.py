@@ -20,3 +20,8 @@ class MenuList(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['items'] = TYPE
         return context
+
+
+class MenuItemDetail(generic.DetailView):
+    model = Item
+    template_name = "menu_item_detail.html"

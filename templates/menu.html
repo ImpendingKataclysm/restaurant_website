@@ -15,7 +15,7 @@
                             {% if row.status == 0 %}
                                 <h4><del>{{ row.name }}</del></h4>
                             {% else %}
-                                <a href="#"><h4>{{ row.name }}</h4></a>
+                                <a href="{% url 'menu_item' row.pk %}"><h4>{{ row.name }}</h4></a>
                             {% endif %}
                             <span>{{ row.price }}</span>
                         </li>
