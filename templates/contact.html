@@ -7,7 +7,7 @@
     <ul>
         {% for row in location_list %}
             <h3>{{ row.city }}</h3>
-            <p>{{ row.unit_no }} {{ row.street }}</p>
+            <p><a href="{% url 'location' row.pk %}">{{ row.unit_no }} {{ row.street }}</a> </p>
             <p>{{ row.postal }}</p>
             <p>{{ row.phone }}</p>
         {% endfor %}

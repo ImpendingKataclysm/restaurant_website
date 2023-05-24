@@ -34,3 +34,8 @@ class LocationList(generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+
+class LocationDetail(generic.DetailView):
+    model = Location
+    template_name = "location_detail.html"

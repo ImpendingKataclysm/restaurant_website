@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Restaurant - {{ location.city }}{% endblock %}
+
+{% block content %}
+    <iframe src="https://www.google.com/maps/embed/"></iframe>
+    <ul>
+        <li>{{ location.unit_no }} {{ location.street }}</li>
+        <li>{{ location.city }} {{ location.postal }}</li>
+        <li>{{ location.phone }}</li>
+        <li>Open 12:30pm - 11:30pm</li>
+    </ul>
+{% endblock %}
