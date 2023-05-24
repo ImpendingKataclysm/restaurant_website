@@ -27,3 +27,15 @@ class Item(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Location(models.Model):
+    unit_no = models.CharField(max_length=100)
+    street = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    postal = models.CharField(max_length=6)
+    province = models.CharField(max_length=100)
+    phone = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f"{self.unit_no} {self.street} {self.city}, {self.province}"
