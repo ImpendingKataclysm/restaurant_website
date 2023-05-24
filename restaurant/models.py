@@ -39,3 +39,15 @@ class Location(models.Model):
 
     def __str__(self):
         return f"{self.unit_no} {self.street} {self.city}, {self.province}"
+
+
+class Reservation(models.Model):
+    party_name = models.CharField(max_length=1000)
+    party_size = models.IntegerField(max_length=50)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    date_reserved = models.DateField()
+    time_reserved = models.TimeField()
+    booking_date = models.DateTimeField()
+
+    def __str__(self):
+        return f"{self.party_name}, {self.date_reserved}"
