@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Restaurant - Contact{% endblock %}
+
+{% block content %}
+    <h2>Locations</h2>
+    <ul>
+        {% for row in location_list %}
+            <h3>{{ row.city }}</h3>
+            <p>{{ row.unit_no }} {{ row.street }}</p>
+            <p>{{ row.postal }}</p>
+            <p>{{ row.phone }}</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

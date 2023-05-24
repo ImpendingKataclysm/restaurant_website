@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Item, TYPE
+from .models import Item, TYPE, Location
 
 
 class HomePage(generic.TemplateView):
@@ -25,3 +25,12 @@ class MenuList(generic.ListView):
 class MenuItemDetail(generic.DetailView):
     model = Item
     template_name = "menu_item_detail.html"
+
+
+class LocationList(generic.ListView):
+    queryset = Location.objects.order_by("city")
+    template_name = "contact.html"
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
