@@ -43,7 +43,7 @@ class Location(models.Model):
 
 class Reservation(models.Model):
     party_name = models.CharField(max_length=1000)
-    party_size = models.IntegerField(max_length=50)
+    party_size = models.IntegerField()
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     date_reserved = models.DateField()
     time_reserved = models.TimeField()
