@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
+from django.contrib import messages
 from datetime import datetime
 
 from .models import Item, TYPE, Location, Reservation
@@ -73,8 +74,24 @@ def reserve(request):
                                                date_reserved=date_reserved,
                                                time_reserved=time_reserved,
                                                booking_date=booking_date)
+
+                    email_subject = "Job Application"
+                    message = f"""
+                                Thank you for your reservation at Best Restaurant for {date_reserved} at {time_reserved}!
+                                Reservation details:
+                                Date: {date_reserved}
+                                Time: {time_reserved}
+                                Party Name: {party_name}
+                                Party Size: {party_size}
+                                Contact Phone: {contact_phone}
+                                Location Address: {loc}
+                                """
+
+                    # send_email(email_subject, message, email)
+
+                    success_message = f"Reservation for {date_reserved} at {time_reserved} successful. Check your email for more details."
+                    messages.success(request, success_message)
         else:
-            print('not valid:')
-            print(form.errors)
+            messages.error(request, "Sorry, there was a problem processing your form. Please try again.")
 
     return render(request, "reserve.html", context)
