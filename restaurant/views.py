@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Item, TYPE, Location
+from .models import Item, TYPE, Location, Reservation
+from .forms import ReservationForm
 
 
 class HomePage(generic.TemplateView):
@@ -39,3 +40,13 @@ class LocationList(generic.ListView):
 class LocationDetail(generic.DetailView):
     model = Location
     template_name = "location_detail.html"
+
+
+def reserve(request):
+    restaurant_locs = Location.objects.order_by("city")
+    context = {"locations": []}
+
+    for loc in restaurant_locs:
+        context["locations"].append(loc)
+
+    return render(request, "reserve.html", context)
