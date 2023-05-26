@@ -3,5 +3,9 @@
 {% block title %}Restaurant - Home{% endblock %}
 {% block content %}
     <h1>Restaurant</h1>
-    <p>{% lorem %}</p>
+    <ul>
+        <li><a href="{% url 'menu' %}">View Menu</a> </li>
+        <li><a href="{% url 'contact' %}">Contact Your Nearest Location</a> </li>
+        <li><a href="{% url 'reservation' %}">Book Your Visit</a> </li>
+    </ul>
 {% endblock %}
