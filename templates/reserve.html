@@ -6,6 +6,7 @@
     <h2>Book Your Reservation Today</h2>
     <p><a href="{% url 'contact' %}">Call your nearest location</a> or book online now: </p>
     <form method="POST">
+    {% csrf_token %}
         <label for="location">Select your location:</label>
         <div id="location">
             {% for l in locations %}
@@ -14,12 +15,12 @@
             {% endfor %}
         </div>
         <div>
-            <label for="res_date">Please select your reservation date:</label>
-            <input type="date" id="res_date" name="res_date" required>
+            <label for="date_reserved">Please select your reservation date:</label>
+            <input type="date" id="date_reserved" name="date_reserved" value="date_reserved" required>
         </div>
         <div>
-            <label for="res_time">Please select the time you would like:</label>
-            <input type="time" id="res_time" name="res_time">
+            <label for="time_reserved">Please select the time you would like:</label>
+            <input type="time" id="time_reserved" name="time_reserved" value="time_reserved">
         </div>
         <div>
             <label for="party_name">What is the name of your party?</label>
