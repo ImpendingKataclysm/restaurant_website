@@ -1,3 +1,5 @@
+
+from os import listdir
 from django.shortcuts import render
 from django.views import generic
 from django.contrib import messages
@@ -22,6 +24,8 @@ class MenuList(generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['items'] = TYPE
+        images = listdir('restaurant/static/images/')
+        context['images'] = [f"images/{image}" for image in images if image.startswith('menu')]
         return context
 
 
@@ -75,7 +79,7 @@ def reserve(request):
                                                time_reserved=time_reserved,
                                                booking_date=booking_date)
 
-                    email_subject = "Job Application"
+                    email_subject = "Reservation"
                     message = f"""
                                 Thank you for your reservation at Best Restaurant for {date_reserved} at {time_reserved}!
                                 Reservation details:

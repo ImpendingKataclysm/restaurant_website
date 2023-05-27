@@ -28,4 +28,9 @@
         </li>
     {% endfor %}
     </ul>
+    <div>
+    {% for image in images %}
+        <img src="{% static image %}" alt="menu item">
+    {% endfor %}
+    </div>
 {% endblock %}

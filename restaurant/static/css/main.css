@@ -42,15 +42,15 @@ html, body, ul, .page_wrap {
     background-size: cover;
 }
 
-.menu:before {
-    content: '';
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    min-height: 100%;
-    opacity: 0.9;
-    background: linear-gradient(to bottom, #489257, #74BB83);
-    background-size: cover;
-}
+/*.menu:before {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    position: fixed;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    min-height: 100%;*/
+/*    opacity: 0.9;*/
+/*    background: linear-gradient(to bottom, #489257, #74BB83);*/
+/*    background-size: cover;*/
+/*}*/
