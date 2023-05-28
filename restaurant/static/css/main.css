@@ -73,3 +73,16 @@ html, body, ul, .page_wrap {
     background: url("../images/rest_seating.jpg");
     background-size: cover;
 }
+
+.reserve:before {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.6;
+    background: url("../images/tomato_bg.jpg");
+    background-size: cover;
+}
