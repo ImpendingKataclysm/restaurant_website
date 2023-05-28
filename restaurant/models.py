@@ -24,6 +24,7 @@ class Item(models.Model):
     status = models.IntegerField(choices=STATUS, default=1)
     date_added = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
+    image_url = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return self.name
