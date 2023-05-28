@@ -24,7 +24,7 @@ html, body, ul, .page_wrap {
     top: 0;
     width: 100%;
     height: 100vh;
-    opacity: 0.6;
+    opacity: 0.8;
     background: url("../images/rest_interior.jpg") no-repeat;
     background-size: cover;
 }
@@ -37,7 +37,7 @@ html, body, ul, .page_wrap {
     top: 0;
     width: 100%;
     height: 100vh;
-    opacity: 0.6;
+    opacity: 0.8;
     background: url("../images/rest_int2.jpeg") no-repeat;
     background-size: cover;
 }
@@ -56,7 +56,7 @@ html, body, ul, .page_wrap {
     top: 0;
     width: 100%;
     height: 100vh;
-    opacity: 0.6;
+    opacity: 0.8;
     background: url("../images/pasta_bg.jpg");
     background-size: cover;
 }
@@ -69,7 +69,7 @@ html, body, ul, .page_wrap {
     top: 0;
     width: 100%;
     height: 100vh;
-    opacity: 0.6;
+    opacity: 0.8;
     background: url("../images/rest_seating.jpg");
     background-size: cover;
 }
@@ -82,7 +82,7 @@ html, body, ul, .page_wrap {
     top: 0;
     width: 100%;
     height: 100vh;
-    opacity: 0.6;
+    opacity: 0.8;
     background: url("../images/tomato_bg.jpg");
     background-size: cover;
 }
