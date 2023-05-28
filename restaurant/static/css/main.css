@@ -42,10 +42,11 @@ html, body, ul, .page_wrap {
     background-size: cover;
 }
 
-/*.menu {*/
-/*    background: linear-gradient(to bottom, #579d65, #74BB83);*/
-/*    background-size: cover;*/
-/*}*/
+.menu_detail {
+    background: linear-gradient(to bottom, #579d65, #74BB83);
+    background-size: cover;
+    height: 100vh;
+}
 
 .menu:before {
     content: '';
