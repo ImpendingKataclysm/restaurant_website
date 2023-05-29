@@ -98,6 +98,9 @@ html, body, ul, .page_wrap {
 
 nav {
     background-color: rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 nav ul {
@@ -120,7 +123,7 @@ nav a:link, nav a:visited {
 }
 
 nav a:hover, nav a:focus {
-    color: #fbd648;
+    color: #91e97a;
 }
 
 nav a:active {
@@ -139,4 +142,31 @@ nav a:active {
     text-align: center;
     color: #b2f4c2;
     text-shadow: 0.1rem 0.1rem 1.9rem #030b00;
+}
+
+.home_menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.home_menu a:link, .home_menu a:visited {
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #aff7bf;
+    background-color: rgba(0, 25, 10, 0.5);
+    padding: 1.5rem;
+    border-radius: 2.5rem;
+}
+
+.home_menu a:hover, .home_menu a:focus {
+    color: #579d65;
+    background-color: rgba(0, 25, 10, 0.8);
+}
+
+.home_menu a:active {
+    color: #00190A;
+    background-color: #579d65;
 }
