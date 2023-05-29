@@ -336,3 +336,27 @@ dd, li {
     color: #91e97a;
     background-color: #191400;
 }
+
+.response_message li {
+    list-style-type: none;
+    position: absolute;
+    top: 10rem;
+    left: 35rem;
+    width: 25rem;
+    padding: 1.5rem;
+    border-radius: 2.5rem;
+}
+
+.success {
+    color: #aff7bf;
+    background-color: rgba(0, 25, 10, 0.9);
+}
+
+a.response_btn:link, a.response_btn:visited {
+    display: block;
+    color: #aff7bf;
+}
+
+a.response_btn:hover, a.response_btn:focus {
+    color: #91e97a;
+}
