@@ -5,40 +5,43 @@
 {% block heading %}Book Your Reservation Today{% endblock %}
 
 {% block content %}
-    <p><a href="{% url 'contact' %}">Call your nearest location</a> or book online now: </p>
-    <form method="POST">
-    {% csrf_token %}
-        <label for="location">Select your location:</label>
-        <div id="location">
-            {% for l in locations %}
-                <input type="radio" id="location{{ l.id }}" value="{{ l }}" name="location" required>
-                <label for="location{{ l.id }}">{{ l }}</label>
-            {% endfor %}
-        </div>
-        <div>
-            <label for="date_reserved">Please select your reservation date:</label>
-            <input type="date" id="date_reserved" name="date_reserved" value="date_reserved" required>
-        </div>
-        <div>
-            <label for="time_reserved">Please select the time you would like:</label>
-            <input type="time" id="time_reserved" name="time_reserved" value="time_reserved">
-        </div>
-        <div>
-            <label for="party_name">What is the name of your party?</label>
-            <input type="text" id="party_name" name="party_name" required>
-        </div>
-        <div>
-            <label for="party_size">How many people are in your party?</label>
-            <input type="text" id="party_size" name="party_size" required>
-        </div>
-        <div>
-            <label for="contact_phone">What is your phone number? (This may be used for identification or to contact you in case there is a problem)</label>
-            <input type="text" id="contact_phone" name="contact_phone" required>
-        </div>
-        <div>
-            <input type="submit" value="Complete Reservation">
-        </div>
-    </form>
+    <div class="form_card">
+        <p><a href="{% url 'contact' %}">Call your nearest location</a> or book online now: </p>
+        <form method="POST">
+        {% csrf_token %}
+            <label for="location">Select your location:</label>
+            <div id="location" class="form_input">
+                {% for l in locations %}
+                    <input type="radio" id="location{{ l.id }}" value="{{ l }}" name="location" required>
+                    <label for="location{{ l.id }}">{{ l }}</label>
+                    <br>
+                {% endfor %}
+            </div>
+            <div class="form_input">
+                <label for="date_reserved">Please select your reservation date:</label>
+                <input type="date" id="date_reserved" name="date_reserved" value="date_reserved" required>
+            </div>
+            <div class="form_input">
+                <label for="time_reserved">Please select the time you would like:</label>
+                <input type="time" id="time_reserved" name="time_reserved" value="time_reserved">
+            </div>
+            <div class="form_input">
+                <label for="party_name">What is the name of your party?</label>
+                <input type="text" id="party_name" name="party_name" required>
+            </div>
+            <div class="form_input">
+                <label for="party_size">How many people are in your party?</label>
+                <input type="text" id="party_size" name="party_size" required>
+            </div>
+            <div class="form_input">
+                <label for="contact_phone">What is your phone number? (This may be used for identification or to contact you in case there is a problem)</label>
+                <input type="text" id="contact_phone" name="contact_phone" required>
+            </div>
+            <div class="form_input submit_btn">
+                <input type="submit" value="Complete Reservation">
+            </div>
+        </form>
+    </div>
     {% if messages %}
         <ul class="response_message">
        {% for message in messages %}

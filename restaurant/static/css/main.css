@@ -183,9 +183,9 @@ nav a:active {
     text-decoration: none;
     font-size: 2.5rem;
     font-weight: bold;
-    letter-spacing: 0.1rem;
-    color: #aff7bf;
+    letter-spacing: 0.1rem;color: #aff7bf;
     background-color: rgba(0, 25, 10, 0.5);
+
     padding: 1.5rem;
     border-radius: 2.5rem;
 }
@@ -209,7 +209,7 @@ h2 {
     letter-spacing: 0.1rem;
 }
 
-p, dt {
+p, dt, label {
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
 }
@@ -237,17 +237,17 @@ dd, li {
     text-align: center;
 }
 
-.menu_card a:link, .menu_card a:visited, .location_card a:link, .location_card a:visited {
+.menu_card a:link, .menu_card a:visited, .location_card a:link, .location_card a:visited, .form_card a:link, .form_card a:visited {
     text-decoration: none;
     font-weight: bold;
     color: #b5fba7;
 }
 
-.menu_card a:focus, .menu_card a:hover, .location_card a:focus, .location_card a:hover {
+.menu_card a:focus, .menu_card a:hover, .location_card a:focus, .location_card a:hover, .form_card a:hover, .form_card a:focus {
     color: #74BB83;
 }
 
-.menu_card, .menu_item, .location_card, .location {
+.menu_card, .menu_item, .location_card, .location, .form_card {
     color: #f7eabb;
     border-radius: 1.2rem;
     margin: 1.1rem auto;
@@ -277,7 +277,7 @@ dd, li {
     justify-content: space-around;
 }
 
-.location_card {
+.location_card, .form_card {
     background-color: rgba(25, 20, 0, 0.7);
     border-radius: 2.5rem;
     letter-spacing: 0.1rem;
@@ -304,4 +304,35 @@ dd, li {
 
 .location_iframe iframe {
     min-height: 20rem;
+}
+
+.form_card {
+    width: 45%;
+    margin: auto;
+}
+
+.form_input {
+    padding: 0.2rem;
+}
+
+.submit_btn input {
+    font-family: "Quesha", sans-serif;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 1.9rem;
+    padding: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #aff7bf;
+    background-color: rgba(0, 25, 10, 0.5);
+}
+
+.submit_btn input:hover, .submit_bt input:focus {
+    background-color: #aff7bf;
+    color: rgba(0, 25, 10, 0.5);
+}
+
+.submit_btn input:active {
+    color: #91e97a;
+    background-color: #191400;
 }
