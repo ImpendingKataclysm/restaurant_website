@@ -2,29 +2,29 @@
 {% load  static%}
 
 {% block title %}Restaurant - Menu {% endblock %}
-
 {% block page %}menu{% endblock %}
+{% block heading_class %}page_heading{% endblock %}
+{% block heading %}Menu{% endblock %}
 {% block content %}
-    <h2>Menu</h2>
     <ul>
     {% for item in items %}
         <li>
             <h3>{{ item.1 }}</h3>
-            <ul>
+            <dl>
                 {% for row in item_list %}
                     {% if row.type == item.0 %}
-                        <li>
+                        <dt>
                             {% if row.status == 0 %}
-                                <h4><del>{{ row.name }}</del></h4>
+                                <del>{{ row.name }}</del>
                             {% else %}
-                                <a href="{% url 'menu_item' row.pk %}"><h4>{{ row.name }}</h4></a>
+                                <a href="{% url 'menu_item' row.pk %}">{{ row.name }}</a>
                             {% endif %}
                             <span>{{ row.price }}</span>
-                        </li>
-                        <li>{{ row.description }}</li>
+                        </dt>
+                        <dd>{{ row.description }}</dd>
                     {% endif %}
                 {% endfor %}
-            </ul>
+            </dl>
         </li>
     {% endfor %}
     </ul>

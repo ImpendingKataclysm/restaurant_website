@@ -20,6 +20,9 @@
            </nav>
            <main>
                <div class="main_wrap">
+                   <header class={% block heading_class %}{% endblock %}>
+                       <h1>{% block heading %}{% endblock %}</h1>
+                   </header>
                    {% block content %}
                    {% endblock %}
                </div>

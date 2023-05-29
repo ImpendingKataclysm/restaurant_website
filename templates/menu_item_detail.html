@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block title %}Restaurant - {{ item.name }}{% endblock %}
 {% block page %}menu_detail{% endblock %}
-
+{% block heading_class %}page_heading{% endblock %}
+{% block heading %}{{ item.name }}{% endblock %}
 {% block content %}
-    <h2>{{ item.name }}</h2>
     <p>{{ item.description }}</p>
     <p>{{ item.price }}</p>
     <img src="{% static  item.image_url%}" alt="{{ item.name }}">

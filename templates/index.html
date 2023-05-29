@@ -2,10 +2,9 @@
 
 {% block title %}Restaurant - Home{% endblock %}
 {% block page %}home{% endblock %}
+{% block heading_class %}main_heading{% endblock %}
+{% block heading %}Best Restaurant{% endblock %}
 {% block content %}
-    <div class="main_heading">
-        <h1>Best Restaurant</h1>
-    </div>
     <ul class="home_menu">
         <li><a href="{% url 'menu' %}">View Menu</a> </li>
         <li><a href="{% url 'contact' %}">Find Location</a> </li>
