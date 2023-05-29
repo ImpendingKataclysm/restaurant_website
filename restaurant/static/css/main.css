@@ -51,10 +51,17 @@ html, body, ul, .page_wrap {
     background-size: cover;
 }
 
-.location_detail {
-    background: linear-gradient(to bottom, #799d57, #9cbb74);
-    background-size: cover;
+.location_detail:before {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 100vh;
+    opacity: 0.6;
+    background: url("../images/basil_bg.jpg") no-repeat;
+    background-size: cover;
 }
 
 .menu_detail:before {
@@ -207,7 +214,7 @@ p, dt {
     letter-spacing: 0.1rem;
 }
 
-dd {
+dd, li {
     font-size: 1.6rem;
 }
 
@@ -220,14 +227,14 @@ dd {
     border-radius: 2rem;
 }
 
-.menu_card {
+.menu_card, .location ul {
     list-style-type: none;
-    width: 40%;
-    text-align: center;
 }
 
 .menu_card {
     background-color: rgba(25, 20, 0, 0.6);
+    width: 40%;
+    text-align: center;
 }
 
 .menu_card a:link, .menu_card a:visited, .location_card a:link, .location_card a:visited {
@@ -240,7 +247,7 @@ dd {
     color: #74BB83;
 }
 
-.menu_card, .menu_item, .location_card {
+.menu_card, .menu_item, .location_card, .location {
     color: #f7eabb;
     border-radius: 1.2rem;
     margin: 1.1rem auto;
@@ -255,7 +262,7 @@ dd {
     margin: auto;
 }
 
-.menu_image img {
+.menu_image img, .location_iframe iframe {
     width: 100%;
     border-radius: 1.1rem;
     box-shadow: 0.2rem 0.2rem 1.5rem #000;
@@ -283,4 +290,18 @@ dd {
 
 .location_card dd {
     margin-left: 0;
+}
+
+.location {
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    background-color: rgba(20, 80, 0, 0.4);
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    width: 65%;
+    margin: auto;
+}
+
+.location_iframe iframe {
+    min-height: 20rem;
 }

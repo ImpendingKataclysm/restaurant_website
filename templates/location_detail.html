@@ -4,11 +4,15 @@
 {% block heading_class %}page_heading{% endblock %}
 {% block heading %}Find Location{% endblock %}
 {% block content %}
-    <iframe src="https://www.google.com/maps/embed/"></iframe>
-    <ul>
-        <li>{{ location.unit_no }} {{ location.street }}</li>
-        <li>{{ location.city }} {{ location.postal }}</li>
-        <li>{{ location.phone }}</li>
-        <li>Open 12:30pm - 11:30pm</li>
-    </ul>
+    <div class="location">
+        <ul>
+            <li>{{ location.unit_no }} {{ location.street }}</li>
+            <li>{{ location.city }} {{ location.postal }}</li>
+            <li>{{ location.phone }}</li>
+            <li>Open 12:30pm - 11:30pm</li>
+        </ul>
+        <figure class="location_iframe">
+            <iframe src="https://www.google.com/maps/embed/"></iframe>
+        </figure>
+    </div>
 {% endblock %}
