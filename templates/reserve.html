@@ -19,11 +19,15 @@
             </div>
             <div class="form_input">
                 <label for="date_reserved">Please select your reservation date:</label>
-                <input type="date" id="date_reserved" name="date_reserved" value="date_reserved" required>
+                <input type="date" id="date_reserved" name="date_reserved" value="date_reserved" min="{{ min_date }}" required>
             </div>
             <div class="form_input">
                 <label for="time_reserved">Please select the time you would like:</label>
-                <input type="time" id="time_reserved" name="time_reserved" value="time_reserved">
+                <select id="time_reserved" name="time_reserved" required>
+                    {% for time in times %}
+                        <option value="{{ time }}">{{ time }}</option>
+                    {% endfor %}
+                </select>
             </div>
             <div class="form_input">
                 <label for="party_name">What is the name of your party?</label>

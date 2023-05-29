@@ -1,9 +1,8 @@
-
 from os import listdir
 from django.shortcuts import render
 from django.views import generic
 from django.contrib import messages
-from datetime import datetime
+from datetime import datetime, time
 
 from .models import Item, TYPE, Location, Reservation
 from .forms import ReservationForm
@@ -50,10 +49,17 @@ class LocationDetail(generic.DetailView):
 
 def reserve(request):
     restaurant_locs = Location.objects.order_by("city")
-    context = {"locations": []}
+    context = {"locations": [],
+               "min_date": datetime.now().date().strftime("%Y-%m-%d"),
+               "times": []}
 
     for loc in restaurant_locs:
         context["locations"].append(loc)
+
+    for hour in range(1, 12):
+        for minute in range(0, 60, 30):
+            time_obj = time(hour=hour, minute=minute)
+            context["times"].append(time_obj.strftime('%H:%M'))
 
     if request.method == 'POST':
         form = ReservationForm(request.POST)
