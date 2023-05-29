@@ -1,5 +1,14 @@
+@font-face {
+    font-family: "Quesha";
+    src: url("../fonts/Quesha-gndR.ttf");
+}
+
 html, body {
     height: 100%;
+}
+
+body {
+    font-family: "Quesha", Calibri, sans-serif;
 }
 
 html, body, ul, .page_wrap {
@@ -85,4 +94,14 @@ html, body, ul, .page_wrap {
     opacity: 0.8;
     background: url("../images/tomato_bg.jpg");
     background-size: cover;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
 }
