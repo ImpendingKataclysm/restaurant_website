@@ -8,8 +8,8 @@
 {% block content %}
     <ul>
     {% for item in items %}
-        <li>
-            <h3>{{ item.1 }}</h3>
+        <li class="menu_card">
+            <h2>{{ item.1 }}</h2>
             <dl>
                 {% for row in item_list %}
                     {% if row.type == item.0 %}
@@ -19,9 +19,9 @@
                             {% else %}
                                 <a href="{% url 'menu_item' row.pk %}">{{ row.name }}</a>
                             {% endif %}
-                            <span>{{ row.price }}</span>
                         </dt>
                         <dd>{{ row.description }}</dd>
+                        <dd>{{ row.price }}</dd>
                     {% endif %}
                 {% endfor %}
             </dl>

@@ -190,16 +190,40 @@ h2 {
     letter-spacing: 0.1rem;
 }
 
-p {
+p, dt {
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
 }
 
+dd {
+    font-size: 1.6rem;
+}
+
 .text_block {
-    background-color: rgba(7, 15, 0, 0.6);
+    background-color: rgba(0, 25, 10, 0.6);
     padding: 2.5rem;
-    width: 75%;
+    width: 70%;
     margin: auto;
     text-shadow: 0.2rem 0.2rem 1rem #011801;
     border-radius: 2rem;
+}
+
+.menu_card {
+    list-style-type: none;
+    background-color: rgba(25, 20, 0, 0.6);
+    color: #f7eabb;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    border-radius: 1.2rem;
+}
+
+.menu_card a:link, .menu_card a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #b5fba7;
+}
+
+.menu_card a:focus, .menu_card a:hover {
+    color: #74BB83;
 }
