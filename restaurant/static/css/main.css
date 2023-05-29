@@ -51,10 +51,22 @@ html, body, ul, .page_wrap {
     background-size: cover;
 }
 
-.menu_detail, .location_detail {
-    background: linear-gradient(to bottom, #579d65, #74BB83);
+.location_detail {
+    background: linear-gradient(to bottom, #799d57, #9cbb74);
     background-size: cover;
     height: 100vh;
+}
+
+.menu_detail:before {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #8e9d57, #9cbb74);
+    background-size: cover;
 }
 
 .menu:before {
@@ -150,7 +162,7 @@ nav a:active {
 
 .page_heading {
     font-size: 3rem;
-    color: #b5fba7;
+    color: #c2fba7;
     text-shadow: -0.6rem 0.6rem 1.9rem #000;
 }
 
@@ -211,11 +223,8 @@ dd {
 .menu_card {
     list-style-type: none;
     background-color: rgba(25, 20, 0, 0.6);
-    color: #f7eabb;
-    width: 60%;
-    margin: auto;
+    width: 40%;
     text-align: center;
-    border-radius: 1.2rem;
 }
 
 .menu_card a:link, .menu_card a:visited {
@@ -226,4 +235,29 @@ dd {
 
 .menu_card a:focus, .menu_card a:hover {
     color: #74BB83;
+}
+
+.menu_card, .menu_item {
+    color: #f7eabb;
+    border-radius: 1.2rem;
+    margin: 1.1rem auto;
+    padding: 1.1rem;
+}
+
+.menu_item {
+    background-color: rgba(20, 80, 0, 0.4);
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    width: 70%;
+    margin: auto;
+}
+
+.menu_image img {
+    width: 100%;
+    border-radius: 1.1rem;
+    box-shadow: 0.2rem 0.2rem 1.5rem #000;
+}
+
+.menu_description p {
+    font-size: 2.2rem;
 }

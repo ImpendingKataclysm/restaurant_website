@@ -5,7 +5,13 @@
 {% block heading_class %}page_heading{% endblock %}
 {% block heading %}{{ item.name }}{% endblock %}
 {% block content %}
-    <p>{{ item.description }}</p>
-    <p>{{ item.price }}</p>
-    <img src="{% static  item.image_url%}" alt="{{ item.name }}">
+    <div class="menu_item">
+        <div class="menu_description">
+            <p>{{ item.description }}</p>
+            <p>{{ item.price }}</p>
+        </div>
+        <figure class="menu_image">
+            <img src="{% static  item.image_url%}" alt="{{ item.name }}">
+        </figure>
+    </div>
 {% endblock %}
