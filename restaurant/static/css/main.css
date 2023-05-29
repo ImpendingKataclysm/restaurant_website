@@ -222,22 +222,25 @@ dd {
 
 .menu_card {
     list-style-type: none;
-    background-color: rgba(25, 20, 0, 0.6);
     width: 40%;
     text-align: center;
 }
 
-.menu_card a:link, .menu_card a:visited {
+.menu_card {
+    background-color: rgba(25, 20, 0, 0.6);
+}
+
+.menu_card a:link, .menu_card a:visited, .location_card a:link, .location_card a:visited {
     text-decoration: none;
     font-weight: bold;
     color: #b5fba7;
 }
 
-.menu_card a:focus, .menu_card a:hover {
+.menu_card a:focus, .menu_card a:hover, .location_card a:focus, .location_card a:hover {
     color: #74BB83;
 }
 
-.menu_card, .menu_item {
+.menu_card, .menu_item, .location_card {
     color: #f7eabb;
     border-radius: 1.2rem;
     margin: 1.1rem auto;
@@ -260,4 +263,24 @@ dd {
 
 .menu_description p {
     font-size: 2.2rem;
+}
+
+.location_display {
+    display: flex;
+    justify-content: space-around;
+}
+
+.location_card {
+    background-color: rgba(25, 20, 0, 0.7);
+    border-radius: 2.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.location_card dt {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.location_card dd {
+    margin-left: 0;
 }

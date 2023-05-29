@@ -4,12 +4,15 @@
 {% block heading_class %}page_heading{% endblock %}
 {% block heading %}Locations{% endblock %}
 {% block content %}
-    <ul>
+    <dl class="location_display">
         {% for row in location_list %}
-            <h3>{{ row.city }}</h3>
-            <p><a href="{% url 'location' row.pk %}">{{ row.unit_no }} {{ row.street }}</a> </p>
-            <p>{{ row.postal }}</p>
-            <p>{{ row.phone }}</p>
+            <div class="location_card">
+                <dt>{{ row.city }}</dt>
+                <dd><a href="{% url 'location' row.pk %}">{{ row.unit_no }} {{ row.street }}</a> </dd>
+                <dd>{{ row.postal }}</dd>
+                <dd>{{ row.phone }}</dd>
+                <dd>Open Tuesday - Sunday, 12pm - 11pm</dd>
+            </div>
         {% endfor %}
-    </ul>
+    </dl>
 {% endblock %}
