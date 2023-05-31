@@ -16,6 +16,12 @@ html, body, ul, .page_wrap {
     padding: 0;
 }
 
+.page_wrap {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
 .home, .about, .menu {
     height: 100vh;
     position: relative;
@@ -370,7 +376,7 @@ a.response_btn:hover, a.response_btn:focus {
     color: #91e97a;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
     nav ul, .home_menu {
         flex-direction: column;
         text-align: center;
