@@ -396,6 +396,12 @@ a.response_btn:hover, a.response_btn:focus {
 }
 
 @media screen and (max-width: 760px) {
+     .home_menu, .location_display {
+        flex-direction: column;
+        text-align: center;
+        gap: 3.5rem;
+    }
+
     nav ul, .location_display {
         flex-direction: column;
         text-align: center;
