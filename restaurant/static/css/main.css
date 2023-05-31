@@ -389,7 +389,7 @@ a.response_btn:hover, a.response_btn:focus {
 }
 
 @media screen and (max-width: 560px) {
-    nav ul, .home_menu {
+    nav ul, .home_menu, .location_display {
         flex-direction: column;
         text-align: center;
     }
