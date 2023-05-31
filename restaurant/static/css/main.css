@@ -372,7 +372,7 @@ a.response_btn:hover, a.response_btn:focus {
 
 @media screen and (max-width: 480px) {
     nav ul, .home_menu {
-        display: block;
+        flex-direction: column;
         text-align: center;
     }
 
@@ -383,6 +383,8 @@ a.response_btn:hover, a.response_btn:focus {
     .nav_btn {
         display: block;
         padding: 0.5rem;
+        position: sticky;
+        top: 0;
     }
 
     nav {
@@ -391,5 +393,13 @@ a.response_btn:hover, a.response_btn:focus {
 
     nav.show {
         display: block;
+    }
+
+    .home_menu {
+        gap: 2.2rem;
+    }
+
+    .home_menu a:link {
+        padding: 0.8rem;
     }
 }
