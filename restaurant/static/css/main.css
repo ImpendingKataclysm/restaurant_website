@@ -78,7 +78,7 @@ html, body, ul, .page_wrap {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, #8e9d57, #9cbb74);
+    background: url("../images/oil_bg.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -282,7 +282,7 @@ dd {
 }
 
 .menu_item {
-    background-color: rgba(20, 80, 0, 0.4);
+    background-color: rgba(20, 60, 0, 0.8);
     display: grid;
     grid-template-columns: 35% 1fr;
     width: 70%;
@@ -439,6 +439,11 @@ a.response_btn:hover, a.response_btn:focus {
 
     .about:before {
         background-image: url("../images/mobile_bg2.jpg");
+        background-position: center;
+    }
+
+    .menu_detail:before {
+        background-image: url("../images/mobile_bg3.jpg");
         background-position: center;
     }
 
