@@ -367,9 +367,9 @@ dd {
 .response_message li {
     list-style-type: none;
     position: absolute;
-    top: 10rem;
-    left: 35rem;
-    width: 25rem;
+    top: 10%;
+    left: 35%;
+    width: 25%;
     padding: 1.5rem;
     border-radius: 2.5rem;
 }
@@ -485,5 +485,10 @@ a.response_btn:hover, a.response_btn:focus {
     .location {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
+    }
+
+    .response_message li {
+        width: 50%;
+        left: 20%;
     }
 }
