@@ -188,6 +188,10 @@ nav a:active {
     text-shadow: -0.6rem 0.6rem 1.9rem #000;
 }
 
+.icon_credit {
+    display: none;
+}
+
 .home_menu {
     list-style-type: none;
     display: flex;
@@ -399,6 +403,19 @@ a.response_btn:hover, a.response_btn:focus {
 
     nav.show {
         display: block;
+    }
+
+    .icon_credit {
+        display: block;
+        color: #00190A;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .icon_credit a:link, .icon_credit a:visited {
+        color: #00190A
     }
 
     .home:before {
