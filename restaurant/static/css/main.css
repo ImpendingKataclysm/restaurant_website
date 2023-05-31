@@ -196,6 +196,7 @@ nav a:active {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 2.5rem;
 }
 
 .home_menu a:link, .home_menu a:visited {
@@ -204,7 +205,6 @@ nav a:active {
     font-weight: bold;
     letter-spacing: 0.1rem;color: #aff7bf;
     background-color: rgba(0, 25, 10, 0.5);
-
     padding: 1.5rem;
     border-radius: 2.5rem;
 }
@@ -388,11 +388,10 @@ a.response_btn:hover, a.response_btn:focus {
     color: #91e97a;
 }
 
-@media screen and (max-width: 1020px) {
-     .home_menu {
-        flex-direction: column;
-        text-align: center;
-        gap: 3.5rem;
+@media screen and (max-width: 1160px) {
+    .text_block, .menu_card, .menu_item, .location, .form_card {
+        width: 90%;
+        padding: 1.2rem;
     }
 }
 
@@ -424,7 +423,7 @@ a.response_btn:hover, a.response_btn:focus {
     }
 
     .page_heading {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
     }
 
     .page_heading h1 {
@@ -472,11 +471,6 @@ a.response_btn:hover, a.response_btn:focus {
         padding: 0.8rem;
     }
 
-    .text_block, .menu_card, .menu_item, .location, .form_card {
-        width: 90%;
-        padding: 1.2rem;
-    }
-
     .menu_item {
         grid-template-rows: 1fr auto;
         grid-template-columns: 1fr;
@@ -493,6 +487,11 @@ a.response_btn:hover, a.response_btn:focus {
     .location {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
+    }
+
+    .submit_btn input {
+        padding: 0.5rem;
+        font-size: 1.5rem;
     }
 
     .response_message li {
