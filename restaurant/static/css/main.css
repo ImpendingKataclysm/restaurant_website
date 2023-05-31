@@ -237,6 +237,10 @@ dd, li {
     font-size: 1.6rem;
 }
 
+dd {
+    margin-inline-start: 0;
+}
+
 .text_block {
     background-color: rgba(0, 25, 10, 0.6);
     padding: 2.5rem;
@@ -254,6 +258,10 @@ dd, li {
     background-color: rgba(25, 20, 0, 0.6);
     width: 40%;
     text-align: center;
+}
+
+.menu_card_item {
+    margin: 1.5rem auto;
 }
 
 .menu_card a:link, .menu_card a:visited, .location_card a:link, .location_card a:visited, .form_card a:link, .form_card a:visited {
@@ -395,6 +403,8 @@ a.response_btn:hover, a.response_btn:focus {
         padding: 0.5rem;
         position: sticky;
         top: 0;
+        z-index: 1;
+        max-width: 5%;
     }
 
     nav {
@@ -403,6 +413,10 @@ a.response_btn:hover, a.response_btn:focus {
 
     nav.show {
         display: block;
+    }
+
+    .page_heading h1 {
+        margin: 0.6rem;
     }
 
     .icon_credit {
@@ -436,7 +450,7 @@ a.response_btn:hover, a.response_btn:focus {
         padding: 0.8rem;
     }
 
-    .text_block {
+    .text_block, .menu_card {
         width: 90%;
         padding: 1.2rem;
     }

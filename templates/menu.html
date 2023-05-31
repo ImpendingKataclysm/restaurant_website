@@ -13,15 +13,17 @@
             <dl>
                 {% for row in item_list %}
                     {% if row.type == item.0 %}
-                        <dt>
-                            {% if row.status == 0 %}
-                                <del>{{ row.name }}</del>
-                            {% else %}
-                                <a href="{% url 'menu_item' row.pk %}">{{ row.name }}</a>
-                            {% endif %}
-                        </dt>
-                        <dd>{{ row.description }}</dd>
-                        <dd>{{ row.price }}</dd>
+                        <div class="menu_card_item">
+                            <dt>
+                                {% if row.status == 0 %}
+                                    <del>{{ row.name }}</del>
+                                {% else %}
+                                    <a href="{% url 'menu_item' row.pk %}">{{ row.name }}</a>
+                                {% endif %}
+                            </dt>
+                            <dd>{{ row.description }}</dd>
+                            <dd>{{ row.price }}</dd>
+                        </div>
                     {% endif %}
                 {% endfor %}
             </dl>
