@@ -3,13 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}"
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
    <div class="page_wrap {% block page %}{% endblock %}">
        <div class="page_content">
-           <nav>
+           <div id="nav_btn" class="button nav_btn" tabindex="0">
+               <img class="nav_icon" src="{% static 'images/nav_icon.png' %}" alt="menu_image">
+           </div>
+           <nav id="site_nav">
                <ul>
                    <li><a href="{% url 'home' %}">Home</a> </li>
                    <li><a href="{% url 'about' %}">About</a> </li>
@@ -29,5 +33,11 @@
            </main>
        </div>
    </div>
+   <footer>
+       <div class="icon_credit">
+           <a target="_blank" href="https://icons8.com/icon/82749/menu">Menu</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+       </div>
+   </footer>
+   <script src="{% static 'js/nav.js' %}"></script>
 </body>
 </html>
