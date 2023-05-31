@@ -450,8 +450,21 @@ a.response_btn:hover, a.response_btn:focus {
         padding: 0.8rem;
     }
 
-    .text_block, .menu_card {
+    .text_block, .menu_card, .menu_item {
         width: 90%;
         padding: 1.2rem;
+    }
+
+    .menu_item {
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
+    }
+
+    .menu_description p {
+        font-size: 1.7rem;
+    }
+
+    .menu_image {
+        margin: 0;
     }
 }
