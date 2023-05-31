@@ -388,8 +388,16 @@ a.response_btn:hover, a.response_btn:focus {
     color: #91e97a;
 }
 
-@media screen and (max-width: 560px) {
-    nav ul, .home_menu, .location_display {
+@media screen and (max-width: 1020px) {
+     .home_menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    nav ul, .location_display {
         flex-direction: column;
         text-align: center;
     }
