@@ -406,11 +406,21 @@ a.response_btn:hover, a.response_btn:focus {
         background-position: center;
     }
 
+    .about:before {
+        background-image: url("../images/mobile_bg2.jpg");
+        background-position: center;
+    }
+
     .home_menu {
         gap: 2.2rem;
     }
 
     .home_menu a:link {
         padding: 0.8rem;
+    }
+
+    .text_block {
+        width: 90%;
+        padding: 1.2rem;
     }
 }
