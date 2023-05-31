@@ -450,7 +450,7 @@ a.response_btn:hover, a.response_btn:focus {
         padding: 0.8rem;
     }
 
-    .text_block, .menu_card, .menu_item {
+    .text_block, .menu_card, .menu_item, .location {
         width: 90%;
         padding: 1.2rem;
     }
@@ -464,7 +464,12 @@ a.response_btn:hover, a.response_btn:focus {
         font-size: 1.7rem;
     }
 
-    .menu_image {
-        margin: 0;
+    .menu_image, .location_iframe {
+        margin: 0.5rem 0;
+    }
+
+    .location {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
     }
 }
